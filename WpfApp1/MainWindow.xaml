@@ -1,0 +1,33 @@
+﻿<Window x:Class="AreaCalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Площади фигур" Height="250" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <GroupBox Header="Вид фигуры" HorizontalAlignment="Right" Margin="10" Width="150" Height="100">
+            <StackPanel Height="50" Margin="0,0,-12,0">
+                <RadioButton x:Name="RectangleRadio" Content="Прямоугольник" Checked="ShapeSelectionChanged"/>
+                <RadioButton x:Name="CircleRadio" Content="Круг" Checked="ShapeSelectionChanged"/>
+                <RadioButton x:Name="TriangleRadio" Content="Треугольник" Checked="ShapeSelectionChanged"/>
+            </StackPanel>
+        </GroupBox>
+
+        <StackPanel HorizontalAlignment="Left" Margin="10,20,0,0">
+            <Label x:Name="SideALabel" Content="1-я сторона:" Visibility="Collapsed"/>
+            <TextBox x:Name="SideAInput" Width="100" Visibility="Collapsed"/>
+
+            <Label x:Name="SideBLabel" Content="2-я сторона:" Visibility="Collapsed"/>
+            <TextBox x:Name="SideBInput" Width="100" Visibility="Collapsed"/>
+
+            <Label x:Name="SideCLabel" Content="3-я сторона:" Visibility="Collapsed"/>
+            <TextBox x:Name="SideCInput" Width="100" Visibility="Collapsed"/>
+
+            <Label x:Name="RadiusLabel" Content="Радиус:" Visibility="Collapsed"/>
+            <TextBox x:Name="RadiusInput" Width="100" Visibility="Collapsed"/>
+        </StackPanel>
+
+        <Label Content="Площадь=" Foreground="Red" FontSize="14" HorizontalAlignment="Left" Margin="6,180,0,-40"/>
+        <Label x:Name="ResultLabel" Content="0" FontSize="14" HorizontalAlignment="Left" Margin="76,180,0,-40"/>
+
+        <Button x:Name="CalculateButton" Content="Вычислить" Click="CalculateArea" HorizontalAlignment="Right" Margin="10,180,0,0" Width="100"/>
+    </Grid>
+</Window>
