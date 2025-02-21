@@ -35,3 +35,6 @@ static int Fibonacci(int n)
 
     return n == 0 ? n1 : n2;
 }
+## Исправленный код
+
+### Галактики
